@@ -18,13 +18,11 @@ var JSONdata = mongoose.model('JSONdata', JSONSchema);
 
 app.set('port', (process.env.PORT || 8000));
 
-app.use(express.static(__dirname + '/dist'));
-app.set('views', __dirname + '/dist');
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
-app.get('/', function(req,res){
-  res.render('index')
-});
+app.use(express.static('dist'));
+
+// app.get('/', function(req,res){
+//   res.render('index')
+// });
 
 // views is directory for all template files
 //app.set('app', __dirname + '/app');
