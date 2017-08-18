@@ -6,7 +6,7 @@ var app = express();
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://votek:votek123@ds149373.mlab.com:49373/visualizer');
+mongoose.connect('mongodb://votek:votek123@ds149373.mlab.com:49373/visualizer');
 var db = mongoose.connection;
 
 var JSONSchema = new mongoose.Schema({
