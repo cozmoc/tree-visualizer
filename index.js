@@ -16,8 +16,6 @@ var JSONSchema = new mongoose.Schema({
 
 var JSONdata = mongoose.model('JSONdata', JSONSchema);
 
-app.set('port', (process.env.PORT || 8000));
-
 app.use(express.static(__dirname + '/dist'));
 
 app.get('/', function(req,res){
@@ -61,9 +59,11 @@ app.post('/api/remove', function(req,res) {
   });
 });
 
+app.listen(process.env.PORT || 3000);
+console.log('Running on port 3000...');
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
-});
+// app.listen(app.get('port'), function() {
+//   console.log('Node app is running on port', app.get('port'));
+// });
 
 
