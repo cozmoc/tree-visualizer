@@ -23,7 +23,7 @@ app.set('views', __dirname + '/dist');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.get('/', function(req,res){
-  res.render('/dist/index')
+  res.render('index')
 });
 
 // views is directory for all template files
