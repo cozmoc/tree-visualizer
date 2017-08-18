@@ -20,9 +20,9 @@ app.set('port', (process.env.PORT || 8000));
 
 app.use(express.static('dist'));
 
-// app.get('/', function(req,res){
-//   res.render('index')
-// });
+app.get('/', function(req,res){
+  res.render('index')
+});
 
 // views is directory for all template files
 //app.set('app', __dirname + '/app');
