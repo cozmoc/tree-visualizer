@@ -18,7 +18,7 @@ var JSONdata = mongoose.model('JSONdata', JSONSchema);
 
 app.set('port', (process.env.PORT || 8000));
 
-app.use(express.static('dist'));
+app.use(express.static(__dirname + '/dist'));
 
 app.get('/', function(req,res){
   res.render('index')
