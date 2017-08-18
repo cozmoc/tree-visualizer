@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tree Visualizer</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+  <app-root>Loading...</app-root>
+</body>
+<footer class="fixed-bottom" onmouseover="mouseover()" onmouseleave="mouseleave()">
+<div>
+&nbsp;&nbsp;&nbsp;
+You Might Also Like:
+&nbsp;&nbsp;&nbsp;
+<a href="http://gameoflifeanddeath.com" target="_blank">
+Game Of Life And Death in 2D, 3D & 4D
+</a>
+&nbsp;&nbsp;|&nbsp;
+<a href="https://mixance.com" target="_blank">
+My Blog
+</a>
+
+</div>
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2017 Copyright: <a href="https://www.linkedin.com/in/ahmad-alhasan" target="_blank"> Ahmad Alhasan</a>
+            &nbsp;&nbsp;|&nbsp;
+<a href="https://github.com/cozmoc" target="_blank">
+My Github
+</a>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript">
+	function mouseover() {
+		document.getElementsByTagName('footer')[0].style.opacity = 1;
+	}
+	function mouseleave() {
+		document.getElementsByTagName('footer')[0].style.opacity = 0.5;
+	}
+</script>
+</html>

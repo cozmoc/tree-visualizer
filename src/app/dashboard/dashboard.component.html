@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="jumbotron" >
+  	<h1>
+  	Welcome To Tree Visualizer
+  	</h1>
+		<h2>
+		  Choose Your JSON File
+		</h2>
+	</div>
+	<label class="btn btn-default btn-file">
+		<input class="input" type='file' accept=".json" (change)='readSingleFile($event)'>
+		Pick A File
+	</label>
+	<br>
+	<br>
+	<div *ngIf="local" class="panel panel-info">
+		<div class="panel-heading">Preview: {{previewName}}</div>
+		<div class="panel-body">
+		<p>{{previewData}}</p>
+		<button (click)="upload()" class="btn btn-success pull-right">Upload & Continue</button>
+		</div>
+	</div>
+	<h3 class="" *ngIf="saved.length">Saved:</h3>
+	<div *ngFor="let i of saved;let index=index">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+			{{i.name}}
+			<a download style="color:white" class="pull-right" [href]=down(strings(i.data))>Export</a>
+			</div>
+			<div class="panel-body">
+			<p>{{strings(i.data)}}</p>
+			<button (click)="remove(index,i._id)" class="btn btn-danger pull-left">Remove</button>
+			<button (click)="choose(i)" class="btn btn-success pull-right">Choose</button>
+			</div>
+	</div>
+<br>
+<br>
+<br>

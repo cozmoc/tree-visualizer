@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="jumbotron" >
+	<h1>
+	  Selected Tree Chart
+	</h1>
+	</div>
+	<button class="btn btn-primary pull-left" (click)="goBack();">← Choose Another File</button>
+	<a download [href]="export(data.data)"><button class="btn btn-warning pull-right">Export</button></a>
+	<br>
+	<br>
+	<div>
+	<div class="panel panel-default">
+	  <div class="panel-heading">Name: {{data.name}}</div>
+	  <div class="panel-body"><svg id="svg"></svg></div>
+	</div>
+	
+	</div>
+	</div>
+	<br>
+<br>
+<br>
