@@ -16,11 +16,15 @@ var JSONSchema = new mongoose.Schema({
 
 var JSONdata = mongoose.model('JSONdata', JSONSchema);
 
-app.use(express.static(__dirname + '/dist'));
+// app.set('port', (process.env.PORT || 8000));
 
-app.get('/', function(req,res){
-  res.render('index')
-});
+// app.use(express.static(__dirname + '/dist'));
+// app.set('views', __dirname + '/dist');
+// app.engine('html', require('ejs').renderFile);
+// app.set('view engine', 'html');
+// app.get('/', function(req,res){
+//   res.render('/dist/index')
+// });
 
 // views is directory for all template files
 //app.set('app', __dirname + '/app');
@@ -59,11 +63,19 @@ app.post('/api/remove', function(req,res) {
   });
 });
 
-app.listen(process.env.PORT || 3000);
-console.log('Running on port 3000...');
+app.set('port', (process.env.PORT || 8000));
 
-// app.listen(app.get('port'), function() {
-//   console.log('Node app is running on port', app.get('port'));
-// });
+app.use(express.static(__dirname + '/app'));
 
+// views is directory for all template files
+app.set('app', __dirname + '/app');
+app.set('app engine', 'ejs');
+
+app.get('/', function(request, response) {
+  response.render('app/index');
+});
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
 
